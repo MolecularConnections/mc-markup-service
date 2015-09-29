@@ -32,7 +32,12 @@ class simpleTest extends PHPUnit_Framework_TestCase
     }
 
     public function testJatsToHtmlDecisionLetter() {
-        $compares = $this->compareHtmlSection('-section-decisio-letter', 'Decision letter');
+        $compares = $this->compareHtmlSection('-section-decision-letter', 'Decision letter');
+        $this->runHtmlComparisons($compares);
+    }
+
+    public function testJatsToHtmlReferences() {
+        $compares = $this->compareHtmlSection('-section-references', 'References');
         $this->runHtmlComparisons($compares);
     }
 
